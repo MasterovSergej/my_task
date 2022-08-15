@@ -21,7 +21,7 @@
        
   - name: Creating a projects folder
     file:
-      path: /opt/python_venvs
+      path: /opt/python_venvs/{{ ans_name_conf }}
       state: directory
       mode: 0755 
       
