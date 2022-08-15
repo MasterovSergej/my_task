@@ -23,7 +23,16 @@
     file:
       path: /opt/python_venvs
       state: directory
-      mode: 0755  
+      mode: 0755 
+      
+      
+  - name: Check!!!!
+    shell: | 
+      cd /opt/python_venvs
+      ls -la
+    register: results
+  - debug:
+      var: results   
       
   - name: Copying a configuration file to a remote machine
     copy:
